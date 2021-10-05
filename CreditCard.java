@@ -7,14 +7,16 @@ public class CreditCard {
 	public static void main(String[] args) {
 		
 		long testNumber =(long) ((Math.random() + 0.01) * Math.pow(10.0, 20) - Math.pow(10.0, 14));
-		System.out.println("Input: " + testNumber);
 		System.out.println(validate(testNumber));
+		System.out.println(validate(1234567890123456l));
+		System.out.println(validate(1234567890123452l));
 		
 		
 		
 	}
 
 	private static boolean validate(long testNumber) {
+		System.out.println("Input: " + testNumber);
 		int checkDigit = (int) (testNumber % 10l);
 		System.out.println("Check digit: " + checkDigit);
 		
